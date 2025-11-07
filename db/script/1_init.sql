@@ -3,7 +3,7 @@ CREATE SCHEMA IF NOT EXISTS RAW;
 CREATE TABLE IF NOT EXISTS RAW.paciente (
     id_paciente SERIAL PRIMARY KEY,
     nome VARCHAR(150),
-    cpf VARCHAR(20) UNIQUE,
+    cpf VARCHAR(20),
     data_nascimento DATE,
     sexo CHAR(8),
     nome_mae VARCHAR(150),
