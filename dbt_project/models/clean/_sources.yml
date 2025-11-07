@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw
+    tables:
+      - name: paciente
+      - name: profissional_saude
+      - name: atendimento
+      - name: prescricao
