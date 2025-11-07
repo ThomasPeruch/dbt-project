@@ -1,6 +1,10 @@
-{{ config(materialized='table') }}
+{{ config(
+    materialized='table', 
+    post_hook='ALTER TABLE {{this}} ADD PRIMARY KEY (id)') 
+}}
 
 select 
+    gen_random_uuid() as id,
     id_paciente as id_origem,
     INITCAP(TRIM( nome)) as nome,
     REGEXP_REPLACE( cpf, '[^0-9]', '', 'g') as cpf,
@@ -19,4 +23,3 @@ select
 from {{ source('raw', 'paciente') }}
 where data_nascimento is not null
     and (cpf is not null and TRIM(cpf) != '')
-
