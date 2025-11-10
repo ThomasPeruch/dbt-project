@@ -1,15 +1,33 @@
-INSERT INTO RAW.paciente 
-(nome, cpf, data_nascimento, sexo, nome_mae, telefone, email) VALUES
-('João da Silva', '12345678900', NULL, 'maculino', 'Maria da Silva', '(41) 99876-5432', 'joao.silva@email.com'),
-('ANA PEREIRA', '987.654.321-00', '1992-07-05', 'mulher', 'Lucia Pereira', '(41) 99876-1111', 'ana.pereira@email.com'),
-('Carlos Oliveira', '111.222.333-44', '1978-12-22', 'M', 'Rita Oliveira', '(55) 98876-2222', 'carlos.oliveira@email.com'),
-('João Oliveira', '00000000000', '1988-12-12', 'M', null, '(55) 92456-2222', null),
-('Guilherme Dutra', '24673906431', '1999-09-01', 'homem', null, '(55) 91376-4422', 'dutragui@hotmail.com'),
-('sandro sampaio', null, '1988-02-27', null, null, '(55) 98446-1322', null),
-('João Costa','', '1988-12-12', 'M', null, '(55) 98876-2222', 'jcosta@email.com'),
-('Susana', '96312575410', '1963-12-12', 'F', 'Helena', '(55) 98876-4328', 'susana1963@email.com'),
-('Nicole', '86311245678', '1995-12-01', 'Feminino', 'Susana', '(55) 93502-8715', 'ni95@email.com'),
-('Osvaldo Lobo', '09560025003', '1999-08-08', 'Maculino', null, null, 'lobosvaldo@email.com');
+INSERT INTO UNIFIED.paciente
+(id_origem, fl_origem, nome, cpf, data_nascimento, sexo, nome_mae, email, telefone) VALUES
+(100, 'N', 'Gauris Pitichester', '12259925883', '2018-03-08', 'Masculino', NULL, 'senhorpinscher@email.com', NULL);
+
+INSERT INTO RAW.paciente_norte 
+(id_origem, nome, cpf, data_nascimento, sexo, nome_mae, telefone, email) VALUES
+(3,'João da Silva', '12345678900', NULL, 'maculino', 'Maria da Silva', '(41) 99876-5432', 'joao.silva@email.com'),
+(78,'ANA PEREIRA', '987.654.321-00', '1992-07-05', 'mulher', 'Lucia Pereira', '(41) 99876-1111', 'ana.pereira@email.com'),
+(89,'Carlos Oliveira', '111.222.333-44', '1978-12-22', 'M', 'Rita Oliveira', '(55) 98876-2222', 'carlos.oliveira@email.com'),
+(540,'João Oliveira', '00000000000', '1988-12-12', 'M', null, '(55) 92456-2222', null),
+(110,'Guilherme Dutra', '24673906431', '1999-09-01', 'homem', null, '(55) 91376-4422', 'dutragui@hotmail.com'),
+(22,'sandro sampaio', null, '1988-02-27', null, null, '(55) 98446-1322', null),
+(99,'João Costa','', '1988-12-12', 'M', null, '(55) 98876-2222', 'jcosta@email.com'),
+(190,'Susana', '96312575410', '1963-12-12', 'F', 'Helena', '(55) 98876-4328', 'susana1963@email.com'),
+(1,'Nicole', '86311245678', '1995-12-01', 'Feminino', 'Susana', '(55) 93502-8715', 'ni95@email.com'),
+(3,'Osvaldo Lobo', '09560025003', '1999-08-08', 'Maculino', null, null, 'lobosvaldo@email.com');
+
+INSERT INTO RAW.paciente_sul
+(id_origem, nome, cpf, data_nascimento, sexo, nome_mae, telefone, email) VALUES
+(18,'Nicolas', '86656601662', NULL, 'maculino', 'Zilma de Lourdes', null, 'nicolas@email.com'),
+(23,'Thomas', '87787654321', '1995-12-21', 'homem', 'Zilma de Lourdes', null, 'thomas@email.com'),
+(12,'Monique', '20245572100', '1986-06-12', 'mulher', 'Zilma de Lourdes', null, 'monique@email.com'),
+(4,'Zilma de Lourdes', '82936974285', '1956-11-23', 'Feminino', 'Suzana da Silva', null, null),
+(9,'Thiago Luz', '20115545199', '1999-09-01', 'homem', 'Monique', null, 'thiagolight@hotmail.com'),
+(140,'Mariana Lopes', '123.456.789-01', '1989-05-10', 'F', 'Lúcia Lopes', '(41) 98877-1122', 'mariana.lopes@email.com'),
+(127,'JOSE CARLOS', ' 98765432100 ', '1975-03-22', 'M', 'Maria José', '(47) 98455-9922', 'jose.carlos@email.com'),
+(113,'Ana', '24673906431', '1992-11-05', 'mulher', NULL, '(48) 98822-4455', 'ana@email.com'),
+(112,'Rogério da Silva', '00000000000', NULL, 'Maculino', 'Célia da Silva', '(49) 98221-3344', 'rogerio.silva'),
+(199,'Beatriz Souza', 'abc1234567x', '2000-01-20', 'Feminino', 'maria souza', '(42) 98765-1020', 'bia.souza@email.com');
+
 
 -- Profissionais
 INSERT INTO RAW.profissional_saude (cpf, nome, cbo, registro_conselho, especialidade)
