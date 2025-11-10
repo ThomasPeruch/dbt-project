@@ -1,11 +1,11 @@
 version: 2
 
 sources:
-  - name: raw
+  - name: raw_paciente
     schema: raw
     tables:
       - name: paciente_sul
       - name: paciente_norte
-      - name: profissional_saude
-      - name: atendimento
-      - name: prescricao
+    #  - name: profissional_saude
+    #  - name: atendimento
+    #  - name: prescricao
