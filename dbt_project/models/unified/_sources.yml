@@ -4,7 +4,8 @@ sources:
   - name: raw
     schema: raw
     tables:
-      - name: paciente
+      - name: paciente_sul
+      - name: paciente_norte
       - name: profissional_saude
       - name: atendimento
       - name: prescricao

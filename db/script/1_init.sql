@@ -4,14 +4,17 @@ CREATE TABLE UNIFIED.paciente (
 	id_paciente SERIAL PRIMARY KEY,
 	id_origem int4 NULL,
     fl_origem char(1) NOT NULL,
+    dt_origem TIMESTAMP, 
 	nome text NULL,
 	cpf text NULL,
 	data_nascimento date NULL,
 	sexo text NULL,
 	nome_mae text NULL,
+    dt_system TIMESTAMP, 
 	email text NULL,
 	telefone varchar(20) NULL,
 	CONSTRAINT paciente_unique_cpf UNIQUE (cpf)
+    
 );
 
 CREATE SCHEMA IF NOT EXISTS RAW; --bronze layer
@@ -19,11 +22,13 @@ CREATE SCHEMA IF NOT EXISTS RAW; --bronze layer
 CREATE TABLE IF NOT EXISTS RAW.paciente_norte (
     id_paciente SERIAL PRIMARY KEY,
     id_origem int4 NOT NULL,
+    dt_origem TIMESTAMP,
     nome VARCHAR(150),
     cpf VARCHAR(20),
     data_nascimento DATE,
     sexo CHAR(8),
     nome_mae VARCHAR(150),
+    dt_system TIMESTAMP,
     telefone VARCHAR(20),
     email VARCHAR(100)
 );
@@ -31,11 +36,13 @@ CREATE TABLE IF NOT EXISTS RAW.paciente_norte (
 CREATE TABLE IF NOT EXISTS RAW.paciente_sul (
     id_paciente SERIAL PRIMARY KEY,
     id_origem int4 NOT NULL,
+    dt_origem TIMESTAMP,
     nome VARCHAR(150),
     cpf VARCHAR(20),
     data_nascimento DATE,
     sexo CHAR(8),
     nome_mae VARCHAR(150),
+    dt_system TIMESTAMP,
     telefone VARCHAR(20),
     email VARCHAR(100)
 );
