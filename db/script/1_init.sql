@@ -3,7 +3,7 @@ CREATE SCHEMA IF NOT EXISTS UNIFIED; --gold layer
 CREATE TABLE UNIFIED.paciente (
 	id_paciente SERIAL PRIMARY KEY,
 	id_origem int4 NULL,
-    fl_origem char(1) NOT NULL, --imita in_sistem_origem
+    fl_origem char(1) NOT NULL,
 	nome text NULL,
 	cpf text NULL,
 	data_nascimento date NULL,
