@@ -1,6 +1,6 @@
 INSERT INTO UNIFIED.paciente
-(id_origem, fl_origem, dt_origem, nome, cpf, data_nascimento, sexo, nome_mae, email, telefone) VALUES
-(100, 'N', '2025-11-07 15:40:00','Gauris Pitichester', '12259925883', '2018-03-08', 'Masculino', NULL, 'senhorpinscher@email.com', NULL);
+(id_origem, fl_origem, dt_origem, nome, cpf, data_nascimento, sexo, nome_mae,dt_system, email, telefone) VALUES
+(100, 'N', '2025-11-07 15:40:00','Gauris Pitichester', '12259925883', '2018-03-08', 'Masculino', 'Nicole', NOW() ,'senhorpinscher@email.com', NULL);
 
 INSERT INTO RAW.paciente_norte 
 (id_origem, dt_origem, nome, cpf, data_nascimento, sexo, nome_mae, dt_system, telefone, email) VALUES
